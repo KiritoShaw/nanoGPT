@@ -1,0 +1,350 @@
+step 7000: train loss 3.2714, val loss 3.2826
+saving checkpoint to out
+Traceback (most recent call last):
+  File "/home/lejurobot/codespace/nanoGPT/train.py", line 300, in <module>
+    logits, loss = model(X, Y)
+                   ^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1637, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1464, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 655, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 1426, in __call__
+    return hijacked_callback(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 1213, in __call__
+    result = self._inner_convert(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 598, in __call__
+    return _compile(
+           ^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 1059, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_utils_internal.py", line 97, in wrapper_function
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 761, in compile_inner
+    return _compile_inner(code, one_graph, hooks, transform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 797, in _compile_inner
+    out_code = transform_code_object(code, transform)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/bytecode_transformation.py", line 1422, in transform_code_object
+    transformations(instructions, code_options)
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 257, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 715, in transform
+    tracer.run()
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 3500, in run
+    super().run()
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1337, in run
+    while self.step():
+          ^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1246, in step
+    self.dispatch_table[inst.opcode](self, inst)
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 3701, in RETURN_VALUE
+    self._return(inst)
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 3686, in _return
+    self.output.compile_subgraph(
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1179, in compile_subgraph
+    self.compile_and_call_fx_graph(
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1437, in compile_and_call_fx_graph
+    compiled_fn = self.call_user_compiler(gm)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1487, in call_user_compiler
+    return self._call_user_compiler(gm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1519, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, self.example_inputs())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/distributed.py", line 548, in compile_fn
+    submod_compiler.run(*example_inputs)
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/fx/interpreter.py", line 171, in run
+    self.env[node] = self.run_node(node)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/distributed.py", line 283, in run_node
+    compiled_submod_real = self.compile_submod(real_mod, new_args, kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/distributed.py", line 198, in compile_submod
+    self.compiler(input_mod, args),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/repro/after_dynamo.py", line 150, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/__init__.py", line 2347, in __call__
+    return compile_fx(model_, inputs_, config_patches=self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 2089, in compile_fx
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/common.py", line 101, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 1160, in aot_module_simplified
+    compiled_fn = AOTAutogradCache.load(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/autograd_cache.py", line 775, in load
+    compiled_fn = dispatch_and_compile()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 1145, in dispatch_and_compile
+    compiled_fn, _ = create_aot_dispatcher_function(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 570, in create_aot_dispatcher_function
+    return _create_aot_dispatcher_function(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 820, in _create_aot_dispatcher_function
+    compiled_fn, fw_metadata = compiler_fn(
+                               ^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/jit_compile_runtime_wrappers.py", line 1097, in aot_dispatch_autograd
+    compiled_fw_func = aot_config.fw_compiler(fw_module, adjusted_flat_args)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 479, in __call__
+    return self.compiler_fn(gm, example_inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 1944, in fw_compiler_base
+    return inner_compile(
+           ^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 628, in compile_fx_inner
+    return wrap_compiler_debug(_compile_fx_inner, compiler_name="inductor")(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/repro/after_aot.py", line 124, in debug_wrapper
+    inner_compiled_fn = compiler_fn(gm, example_inputs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 720, in _compile_fx_inner
+    mb_compiled_graph, cache_info = FxGraphCache.load_with_key(
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 1296, in load_with_key
+    compiled_graph, cache_info = FxGraphCache._lookup_graph(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 1060, in _lookup_graph
+    artifact_path = graph.after_deserialization(constants)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/output_code.py", line 554, in after_deserialization
+    self.current_callable = PyCodeCache.load_by_key_path(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 2747, in load_by_key_path
+    mod = _reload_python_module(key, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/compile_tasks.py", line 36, in _reload_python_module
+    exec(code, mod.__dict__, mod.__dict__)
+  File "/tmp/torchinductor_lejurobot/jj/cjjjvnc6nx3k7pvfkoqnzf4owelavwjztrvnzvkwqigkbvmjdpts.py", line 400, in <module>
+    async_compile.wait(globals())
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/async_compile.py", line 424, in wait
+    self._wait_futures(scope)
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/async_compile.py", line 445, in _wait_futures
+    scope[key] = result.result()
+                 ^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 3224, in result
+    return self.result_fn()
+           ^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/async_compile.py", line 325, in get_result
+    kernel.precompile(
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 277, in precompile
+    self._make_launchers()
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 434, in _make_launchers
+    launchers.append(result.make_launcher())
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 1091, in make_launcher
+    binary._init_handles()
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/triton/compiler/compiler.py", line 399, in _init_handles
+    max_shared = driver.active.utils.get_device_properties(device)["max_shared_mem"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/lejurobot/codespace/nanoGPT/train.py", line 300, in <module>
+[rank0]:     logits, loss = model(X, Y)
+[rank0]:                    ^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1637, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1464, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 655, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 1426, in __call__
+[rank0]:     return hijacked_callback(
+[rank0]:            ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 1213, in __call__
+[rank0]:     result = self._inner_convert(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 598, in __call__
+[rank0]:     return _compile(
+[rank0]:            ^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 1059, in _compile
+[rank0]:     guarded_code = compile_inner(code, one_graph, hooks, transform)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_utils_internal.py", line 97, in wrapper_function
+[rank0]:     return function(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 761, in compile_inner
+[rank0]:     return _compile_inner(code, one_graph, hooks, transform)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 797, in _compile_inner
+[rank0]:     out_code = transform_code_object(code, transform)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/bytecode_transformation.py", line 1422, in transform_code_object
+[rank0]:     transformations(instructions, code_options)
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 257, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 715, in transform
+[rank0]:     tracer.run()
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 3500, in run
+[rank0]:     super().run()
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1337, in run
+[rank0]:     while self.step():
+[rank0]:           ^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1246, in step
+[rank0]:     self.dispatch_table[inst.opcode](self, inst)
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 3701, in RETURN_VALUE
+[rank0]:     self._return(inst)
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 3686, in _return
+[rank0]:     self.output.compile_subgraph(
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1179, in compile_subgraph
+[rank0]:     self.compile_and_call_fx_graph(
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1437, in compile_and_call_fx_graph
+[rank0]:     compiled_fn = self.call_user_compiler(gm)
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1487, in call_user_compiler
+[rank0]:     return self._call_user_compiler(gm)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1519, in _call_user_compiler
+[rank0]:     compiled_fn = compiler_fn(gm, self.example_inputs())
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/distributed.py", line 548, in compile_fn
+[rank0]:     submod_compiler.run(*example_inputs)
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/fx/interpreter.py", line 171, in run
+[rank0]:     self.env[node] = self.run_node(node)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/distributed.py", line 283, in run_node
+[rank0]:     compiled_submod_real = self.compile_submod(real_mod, new_args, kwargs)
+[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/distributed.py", line 198, in compile_submod
+[rank0]:     self.compiler(input_mod, args),
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/repro/after_dynamo.py", line 150, in __call__
+[rank0]:     compiled_gm = compiler_fn(gm, example_inputs)
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/__init__.py", line 2347, in __call__
+[rank0]:     return compile_fx(model_, inputs_, config_patches=self.config)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 2089, in compile_fx
+[rank0]:     return aot_autograd(
+[rank0]:            ^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/backends/common.py", line 101, in __call__
+[rank0]:     cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 1160, in aot_module_simplified
+[rank0]:     compiled_fn = AOTAutogradCache.load(
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/autograd_cache.py", line 775, in load
+[rank0]:     compiled_fn = dispatch_and_compile()
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 1145, in dispatch_and_compile
+[rank0]:     compiled_fn, _ = create_aot_dispatcher_function(
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 570, in create_aot_dispatcher_function
+[rank0]:     return _create_aot_dispatcher_function(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 820, in _create_aot_dispatcher_function
+[rank0]:     compiled_fn, fw_metadata = compiler_fn(
+[rank0]:                                ^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/jit_compile_runtime_wrappers.py", line 1097, in aot_dispatch_autograd
+[rank0]:     compiled_fw_func = aot_config.fw_compiler(fw_module, adjusted_flat_args)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 479, in __call__
+[rank0]:     return self.compiler_fn(gm, example_inputs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 1944, in fw_compiler_base
+[rank0]:     return inner_compile(
+[rank0]:            ^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 628, in compile_fx_inner
+[rank0]:     return wrap_compiler_debug(_compile_fx_inner, compiler_name="inductor")(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_dynamo/repro/after_aot.py", line 124, in debug_wrapper
+[rank0]:     inner_compiled_fn = compiler_fn(gm, example_inputs)
+[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 720, in _compile_fx_inner
+[rank0]:     mb_compiled_graph, cache_info = FxGraphCache.load_with_key(
+[rank0]:                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 1296, in load_with_key
+[rank0]:     compiled_graph, cache_info = FxGraphCache._lookup_graph(
+[rank0]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 1060, in _lookup_graph
+[rank0]:     artifact_path = graph.after_deserialization(constants)
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/output_code.py", line 554, in after_deserialization
+[rank0]:     self.current_callable = PyCodeCache.load_by_key_path(
+[rank0]:                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 2747, in load_by_key_path
+[rank0]:     mod = _reload_python_module(key, path)
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/compile_tasks.py", line 36, in _reload_python_module
+[rank0]:     exec(code, mod.__dict__, mod.__dict__)
+[rank0]:   File "/tmp/torchinductor_lejurobot/jj/cjjjvnc6nx3k7pvfkoqnzf4owelavwjztrvnzvkwqigkbvmjdpts.py", line 400, in <module>
+[rank0]:     async_compile.wait(globals())
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/async_compile.py", line 424, in wait
+[rank0]:     self._wait_futures(scope)
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/async_compile.py", line 445, in _wait_futures
+[rank0]:     scope[key] = result.result()
+[rank0]:                  ^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/codecache.py", line 3224, in result
+[rank0]:     return self.result_fn()
+[rank0]:            ^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/async_compile.py", line 325, in get_result
+[rank0]:     kernel.precompile(
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 277, in precompile
+[rank0]:     self._make_launchers()
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 434, in _make_launchers
+[rank0]:     launchers.append(result.make_launcher())
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 1091, in make_launcher
+[rank0]:     binary._init_handles()
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/triton/compiler/compiler.py", line 399, in _init_handles
+[rank0]:     max_shared = driver.active.utils.get_device_properties(device)["max_shared_mem"]
+[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt

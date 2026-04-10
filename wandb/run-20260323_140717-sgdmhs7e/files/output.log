@@ -1,0 +1,107 @@
+step 0: train loss 10.9886, val loss 10.9897
+iter 0: loss 10.9884, time 31946.32ms, mfu -100.00%
+iter 10: loss 10.3389, time 3960.93ms, mfu 34.00%
+iter 20: loss 9.7505, time 4273.70ms, mfu 33.75%
+iter 30: loss 9.4834, time 4146.09ms, mfu 33.62%
+iter 40: loss 9.1761, time 4151.09ms, mfu 33.50%
+iter 50: loss 9.1028, time 4035.54ms, mfu 33.49%
+iter 60: loss 8.7652, time 4030.09ms, mfu 33.48%
+iter 70: loss 8.6027, time 4028.35ms, mfu 33.48%
+iter 80: loss 8.4725, time 4045.87ms, mfu 33.46%
+iter 90: loss 8.0004, time 4045.89ms, mfu 33.44%
+iter 100: loss 7.9798, time 4089.27ms, mfu 33.39%
+iter 110: loss 7.6438, time 4221.34ms, mfu 33.24%
+iter 120: loss 7.5113, time 4131.59ms, mfu 33.18%
+iter 130: loss 7.3720, time 4176.46ms, mfu 33.08%
+iter 140: loss 7.4091, time 4257.61ms, mfu 32.94%
+iter 150: loss 7.3086, time 4055.77ms, mfu 32.96%
+iter 160: loss 6.8577, time 4068.52ms, mfu 32.98%
+iter 170: loss 6.7374, time 4176.53ms, mfu 32.90%
+iter 180: loss 6.8329, time 4187.89ms, mfu 32.83%
+iter 190: loss 6.6099, time 4043.64ms, mfu 32.88%
+iter 200: loss 6.6486, time 4183.03ms, mfu 32.81%
+iter 210: loss 6.5176, time 4090.72ms, mfu 32.82%
+iter 220: loss 6.5919, time 4050.97ms, mfu 32.86%
+iter 230: loss 6.3576, time 4066.15ms, mfu 32.89%
+iter 240: loss 6.2907, time 4073.30ms, mfu 32.90%
+iter 250: loss 6.4628, time 4059.20ms, mfu 32.93%
+iter 260: loss 6.1766, time 4060.30ms, mfu 32.95%
+iter 270: loss 6.4079, time 4136.68ms, mfu 32.91%
+iter 280: loss 6.1977, time 4070.14ms, mfu 32.93%
+iter 290: loss 6.2103, time 4308.83ms, mfu 32.76%
+iter 300: loss 6.1902, time 4298.00ms, mfu 32.62%
+iter 310: loss 6.2523, time 4402.35ms, mfu 32.42%
+iter 320: loss 5.9513, time 4605.57ms, mfu 32.10%
+iter 330: loss 5.9196, time 4155.42ms, mfu 32.13%
+iter 340: loss 6.1520, time 4193.18ms, mfu 32.13%
+iter 350: loss 5.9063, time 4078.30ms, mfu 32.22%
+iter 360: loss 5.8907, time 4311.44ms, mfu 32.12%
+iter 370: loss 6.0695, time 4268.00ms, mfu 32.06%
+iter 380: loss 5.8268, time 4198.00ms, mfu 32.06%
+iter 390: loss 5.8907, time 3934.82ms, mfu 32.28%
+iter 400: loss 5.9573, time 4301.50ms, mfu 32.18%
+iter 410: loss 5.9265, time 4121.35ms, mfu 32.23%
+iter 420: loss 5.8766, time 4115.73ms, mfu 32.28%
+iter 430: loss 5.7247, time 4155.74ms, mfu 32.29%
+iter 440: loss 5.6442, time 4111.59ms, mfu 32.34%
+iter 450: loss 5.7667, time 4290.20ms, mfu 32.24%
+iter 460: loss 5.6935, time 4373.40ms, mfu 32.10%
+iter 470: loss 5.6058, time 4136.16ms, mfu 32.14%
+iter 480: loss 5.6374, time 4164.34ms, mfu 32.16%
+iter 490: loss 5.6513, time 4100.79ms, mfu 32.23%
+iter 500: loss 5.4787, time 4070.71ms, mfu 32.32%
+iter 510: loss 5.6159, time 4142.53ms, mfu 32.33%
+iter 520: loss 5.6134, time 4125.86ms, mfu 32.36%
+iter 530: loss 5.6087, time 4223.20ms, mfu 32.32%
+iter 540: loss 5.2913, time 4128.91ms, mfu 32.35%
+iter 550: loss 5.6251, time 3936.05ms, mfu 32.53%
+iter 560: loss 5.5290, time 4202.97ms, mfu 32.48%
+iter 570: loss 5.3376, time 3936.57ms, mfu 32.66%
+iter 580: loss 5.3971, time 3937.45ms, mfu 32.81%
+iter 590: loss 5.5036, time 4246.66ms, mfu 32.70%
+iter 600: loss 5.3475, time 3937.21ms, mfu 32.85%
+iter 610: loss 5.3587, time 4136.72ms, mfu 32.82%
+iter 620: loss 5.2623, time 4213.00ms, mfu 32.73%
+iter 630: loss 5.3844, time 4229.65ms, mfu 32.65%
+iter 640: loss 5.3684, time 3965.81ms, mfu 32.78%
+iter 650: loss 5.1383, time 4202.35ms, mfu 32.70%
+iter 660: loss 5.0651, time 4084.50ms, mfu 32.73%
+iter 670: loss 5.3582, time 4076.54ms, mfu 32.76%
+iter 680: loss 5.2905, time 4079.44ms, mfu 32.78%
+iter 690: loss 5.2736, time 4076.30ms, mfu 32.81%
+iter 700: loss 5.3081, time 4148.45ms, mfu 32.77%
+iter 710: loss 5.1210, time 4068.99ms, mfu 32.81%
+iter 720: loss 4.7830, time 4191.44ms, mfu 32.74%
+iter 730: loss 5.1986, time 4066.78ms, mfu 32.78%
+iter 740: loss 4.9452, time 4163.16ms, mfu 32.73%
+iter 750: loss 4.8851, time 4183.96ms, mfu 32.68%
+iter 760: loss 5.2893, time 4238.27ms, mfu 32.59%
+iter 770: loss 4.8986, time 4044.37ms, mfu 32.66%
+iter 780: loss 4.8297, time 4256.30ms, mfu 32.56%
+iter 790: loss 4.9908, time 4106.83ms, mfu 32.58%
+iter 800: loss 4.9150, time 4045.26ms, mfu 32.65%
+iter 810: loss 5.0397, time 4325.95ms, mfu 32.50%
+iter 820: loss 4.8980, time 4328.88ms, mfu 32.36%
+iter 830: loss 4.8928, time 4084.36ms, mfu 32.42%
+Traceback (most recent call last):
+  File "/home/lejurobot/codespace/nanoGPT/train.py", line 305, in <module>
+    scaler.scale(loss).backward()
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/lejurobot/codespace/nanoGPT/train.py", line 305, in <module>
+[rank0]:     scaler.scale(loss).backward()
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/_tensor.py", line 648, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/autograd/__init__.py", line 353, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/home/lejurobot/miniforge3/envs/ilab230/lib/python3.11/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt

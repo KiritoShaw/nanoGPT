@@ -1,0 +1,121 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            y2axjki0sp9pn1hqok8l8v8qa0tcliet:
+                args:
+                    - config/train_gpt2.py
+                    - --init_from=resume
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 24
+                cpu_count_logical: 32
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "1967317549056"
+                        used: "959895695360"
+                email: 793792618@qq.com
+                executable: /home/lejurobot/miniforge3/envs/ilab230/bin/python
+                git:
+                    commit: abd9735002909fda88aa10914b924e2fe9c3c2e5
+                    remote: git@github.com:KiritoShaw/nanoGPT.git
+                gpu: NVIDIA GeForce RTX 4090
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 16384
+                      memoryTotal: "51527024640"
+                      name: NVIDIA GeForce RTX 4090
+                      uuid: GPU-00e06e53-8a7e-ae78-0261-ed896ec4673a
+                host: lejurobot-4090-3
+                memory:
+                    total: "67222982656"
+                os: Linux-6.8.0-90-generic-x86_64-with-glibc2.35
+                program: /home/lejurobot/codespace/nanoGPT/train.py
+                python: CPython 3.11.14
+                root: /home/lejurobot/codespace/nanoGPT
+                startedAt: "2026-03-23T07:06:47.805498Z"
+                writerId: y2axjki0sp9pn1hqok8l8v8qa0tcliet
+        m: []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 105
+            "2":
+                - 1
+                - 105
+            "3":
+                - 13
+                - 16
+            "4": 3.11.14
+            "5": 0.25.1
+            "12": 0.25.1
+            "13": linux-x86_64
+always_save_checkpoint:
+    value: true
+backend:
+    value: nccl
+batch_size:
+    value: 12
+beta1:
+    value: 0.9
+beta2:
+    value: 0.95
+bias:
+    value: false
+block_size:
+    value: 1024
+compile:
+    value: true
+dataset:
+    value: openwebtext
+decay_lr:
+    value: true
+device:
+    value: cuda
+dropout:
+    value: 0
+dtype:
+    value: bfloat16
+eval_interval:
+    value: 1000
+eval_iters:
+    value: 200
+eval_only:
+    value: false
+grad_clip:
+    value: 1
+gradient_accumulation_steps:
+    value: 40
+init_from:
+    value: resume
+learning_rate:
+    value: 0.0006
+log_interval:
+    value: 10
+lr_decay_iters:
+    value: 600000
+max_iters:
+    value: 600000
+min_lr:
+    value: 6e-05
+n_embd:
+    value: 768
+n_head:
+    value: 12
+n_layer:
+    value: 12
+out_dir:
+    value: out
+wandb_log:
+    value: true
+wandb_project:
+    value: owt
+wandb_run_name:
+    value: gpt2-124M
+warmup_iters:
+    value: 2000
+weight_decay:
+    value: 0.1

@@ -1,0 +1,44 @@
+{
+  "os": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.14",
+  "startedAt": "2026-03-23T07:06:47.805498Z",
+  "args": [
+    "config/train_gpt2.py",
+    "--init_from=resume"
+  ],
+  "program": "/home/lejurobot/codespace/nanoGPT/train.py",
+  "codePath": "train.py",
+  "codePathLocal": "train.py",
+  "git": {
+    "remote": "git@github.com:KiritoShaw/nanoGPT.git",
+    "commit": "abd9735002909fda88aa10914b924e2fe9c3c2e5"
+  },
+  "email": "793792618@qq.com",
+  "root": "/home/lejurobot/codespace/nanoGPT",
+  "host": "lejurobot-4090-3",
+  "executable": "/home/lejurobot/miniforge3/envs/ilab230/bin/python",
+  "cpu_count": 24,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1967317549056",
+      "used": "959895695360"
+    }
+  },
+  "memory": {
+    "total": "67222982656"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "memoryTotal": "51527024640",
+      "cudaCores": 16384,
+      "architecture": "Ada",
+      "uuid": "GPU-00e06e53-8a7e-ae78-0261-ed896ec4673a"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "y2axjki0sp9pn1hqok8l8v8qa0tcliet"
+}
